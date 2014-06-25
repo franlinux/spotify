@@ -11,7 +11,7 @@ url="http://www.spotify.com"
 changelog='spotify.changelog'
 options=('!strip')
 
-md5sums+=('e5d6049689a8ef0f3699986e47478fe2'
+md5sums+=('379cd63fb9f138928b30e3586a20ef29'
 '8d7059f889257fca61edb926bf419111'
 'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
 
