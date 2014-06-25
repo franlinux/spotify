@@ -1,7 +1,7 @@
 pkgname=spotify
-pkgver=0.9.4.183
-_anotherpkgver=.g644e24e.428-1
-pkgrel=4
+pkgver=0.9.10.17
+_anotherpkgver=.g4129e1c.78
+pkgrel=1
 pkgdesc="A proprietary peer-to-peer music streaming service"
 arch=('x86_64')
 _carch=('_amd64')
@@ -19,14 +19,14 @@ depends=("alsa-lib>=1.0.14" "glibc>=2.6" "libxss" "qtwebkit" "gconf" "nspr>=4.0"
          "nspr<5.0" "nss" "dbus" "systemd" "libgcrypt15" "gtk2")
 optdepends=('desktop-file-utils: Adds URI support to compatible desktop environments'
             'ffmpeg-compat: Adds support for playback of local files')
-source=("http://repository.spotify.com/pool/non-free/s/${pkgname}/${pkgname}-client_${pkgver}${_anotherpkgver}${_carch}.deb"
+source=("http://repository.spotify.com/pool/non-free/s/${pkgname}/${pkgname}-client_${pkgver}${_anotherpkgver}-${pkgrel}${_carch}.deb"
 'spotify'
 'spotify.protocol')
 
 package() {
   cd "${srcdir}"
 
-  ar x "${pkgname}-client_${pkgver}${_anotherpkgver}${_carch}.deb" > /dev/null
+  ar x "${pkgname}-client_${pkgver}${_anotherpkgver}-${pkgrel}${_carch}.deb" > /dev/null
   tar -xzf data.tar.gz -C "${pkgdir}"
 
   install -d "${pkgdir}/usr/share/"
