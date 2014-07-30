@@ -1,5 +1,5 @@
 pkgname=spotify
-pkgver=0.9.11.17
+pkgver=0.9.11.27
 _anotherpkgver=.g2b1a638.81-1
 pkgrel=1
 pkgdesc="A proprietary peer-to-peer music streaming service"
