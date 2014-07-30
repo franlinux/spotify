@@ -1,5 +1,5 @@
 pkgname=spotify
-pkgver=0.9.10.17
+pkgver=0.9.11.17
 _anotherpkgver=.g4129e1c.78
 pkgrel=1
 pkgdesc="A proprietary peer-to-peer music streaming service"
@@ -11,7 +11,7 @@ url="http://www.spotify.com"
 changelog='spotify.changelog'
 options=('!strip')
 
-md5sums+=('379cd63fb9f138928b30e3586a20ef29'
+md5sums+=('778a0150fc9c0205f06a620a60f1365c'
 '8d7059f889257fca61edb926bf419111'
 'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
 
