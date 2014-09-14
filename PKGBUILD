@@ -1,7 +1,7 @@
 pkgname=spotify
 pkgver=0.9.11.27
 _anotherpkgver=.g2b1a638.81-1
-pkgrel=2
+pkgrel=3
 pkgdesc="A proprietary peer-to-peer music streaming service"
 arch=('x86_64')
 _carch=('_amd64')
@@ -37,27 +37,6 @@ package() {
 
   # Bin Script
   install -Dm755 "${srcdir}/spotify" "${pkgdir}/usr/bin/spotify"
-
-  if [ "${CARCH}" = "i686" ]; then
-    # libplc4.so
-    ln -s /usr/lib/libplc4.so "${pkgdir}/usr/share/spotify/libs/libplc4.so.0d"
-
-    # libnspr4.so
-    ln -s /usr/lib/libnspr4.so "${pkgdir}/usr/share/spotify/libs/libnspr4.so.0d"
-
-    # libnss3.so
-    ln -s /usr/lib/libnss3.so "${pkgdir}/usr/share/spotify/libs/libnss3.so.1d"
-
-    # libnssutil3.so
-    ln -s /usr/lib/libnssutil3.so "${pkgdir}/usr/share/spotify/libs/libnssutil3.so.1d"
-
-    # libsmime3.so
-    ln -s /usr/lib/libsmime3.so "${pkgdir}/usr/share/spotify/libs/libsmime3.so.1d"
-
-    # openssl
-    ln -s /usr/lib/libssl.so "${pkgdir}/usr/share/spotify/libs/libssl.so.0.9.8"
-    ln -s /usr/lib/libcrypto.so "${pkgdir}/usr/share/spotify/libs/libcrypto.so.0.9.8"
-  fi
 
   # libudev.so
   ln -s /usr/lib/libudev.so "${pkgdir}/usr/share/spotify/libs/libudev.so.0"
