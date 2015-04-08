@@ -51,4 +51,3 @@ package() {
   fi
 }
 
-# spotify-client_0.9.17.1.g9b85d43.7-1_amd64.deb  
