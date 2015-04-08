@@ -1,6 +1,6 @@
 pkgname=spotify
-pkgver=0.9.11.27
-_anotherpkgver=.g2b1a638.81-1
+pkgver=0.9.17.1
+_anotherpkgver=.g9b85d43.7-1
 pkgrel=3
 pkgdesc="A proprietary peer-to-peer music streaming service"
 arch=('x86_64')
@@ -11,7 +11,7 @@ url="http://www.spotify.com"
 changelog='spotify.changelog'
 options=('!strip')
 
-md5sums+=('778a0150fc9c0205f06a620a60f1365c'
+md5sums+=('6cac4995a58f1a8627865f034df42800'
 '8d7059f889257fca61edb926bf419111'
 'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
 
@@ -27,7 +27,7 @@ package() {
   cd "${srcdir}"
 
   ar x "${pkgname}-client_${pkgver}${_anotherpkgver}${_carch}.deb" > /dev/null
-  tar -xzf data.tar.gz -C "${pkgdir}"
+  tar -xf data.tar.xz -C "${pkgdir}"
 
   install -d "${pkgdir}/usr/share/"
   mv "${pkgdir}/opt/spotify" "${pkgdir}/usr/share/"
@@ -50,3 +50,5 @@ package() {
     install -Dm644 "${srcdir}/spotify.protocol" "${pkgdir}/usr/share/kde4/services/spotify.protocol"
   fi
 }
+
+# spotify-client_0.9.17.1.g9b85d43.7-1_amd64.deb  
