@@ -1,18 +1,13 @@
 spotify
 =======
+IMPORTANT: With this new version, much things had changed, so, if you have it installed (the old version), uninstall the old version BEFORE install this new version. Make sure to install libcurl-compat.
 
 A proprietary peer-to-peer music streaming service
 <br>
 <a href="https://www.spotify.com">Spotify</a>
 
-Needed packages from KCP:
-<ul>
-<li>
-<a href="https://github.com/KaOS-Community-Packages/libgcrypt15">libgcrypt - 15</a>
-</li>
-</ul>
-Download and run:
+Before install or upgrade, you need to install this package from KCP:
+```
+kcp -i libcurl-compat
+```
 
-<code>makepkg -si </code> 
-
-in the package directory <i>(with Dolphin and F4)</i>:
