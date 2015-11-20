@@ -7,19 +7,17 @@ arch=('x86_64')
 license=('custom:"Copyright (c) 2006-2010 Spotify Ltd"')
 url="http://www.spotify.com"
 options=('!strip')
-
-source=('spotify'
-'spotify.protocol')
-md5sums=('3f843269e92d536cefdd2f68df11f248'
-'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
-
-source_x86_64=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}${_anotherpkgver}_amd64.deb")
-md5sums_x86_64=('6e7cdbc4321ddf218bff5f36a565f0c2')
-
 depends=("alsa-lib>=1.0.14" "gconf" "gtk2" "glib2" "nss" "systemd" "libxtst" "libx11" "libxss" "libcurl-compat")
 optdepends=('desktop-file-utils: Adds URI support to compatible desktop environments'
             'ffmpeg-compat: Adds support for playback of local files'
 						)
+source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}.${_anotherpkgver}_amd64.deb"
+        "spotify"
+        "spotify.protocol")
+md5sums=('6e7cdbc4321ddf218bff5f36a565f0c2'
+         '3f843269e92d536cefdd2f68df11f248'
+         'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
+         
 
 package() {
   cd "${srcdir}"
