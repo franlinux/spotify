@@ -8,7 +8,7 @@ license=('custom:"Copyright (c) 2006-2010 Spotify Ltd"')
 url="http://www.spotify.com"
 options=('!strip')
 depends=("alsa-lib>=1.0.14" "gconf" "gtk2" "glib2" "nss" "systemd" "libxtst" "libx11" "libxss" "libcurl-compat")
-source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}${_anotherpkgver}_amd64.deb"
+source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.0.23.93.gd6cfae15-30_amd64.deb"
         "spotify"
         "spotify.protocol")
 md5sums=('bf32c2e053099789bdd9246fd8cd828c'
